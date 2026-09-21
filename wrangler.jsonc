@@ -1,0 +1,28 @@
+{
+  "$schema": "../../node_modules/wrangler/config-schema.json",
+  "name": "peer-point-cross-system",
+  "main": "src/server.ts",
+  "compatibility_date": "2026-09-18",
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "ai": { "binding": "AI", "remote": true },
+  "assets": {
+    "not_found_handling": "single-page-application",
+    "run_worker_first": ["/agents/*", "/api/*"],
+  },
+  "durable_objects": {
+    "bindings": [{ "name": "CROSS_SYSTEM_AGENT", "class_name": "CrossSystemAgent" }],
+  },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["CrossSystemAgent"] }],
+  "vars": {
+    "AI_GATEWAY_ID": "default",
+    "MCP_PORTAL_URL": "https://ppug-demo-mcp.cf.prompt2prod.dev/mcp",
+    "MCP_DIRECT_BASE_URL": "https://peer-point-synthetic-mcp.peer-point-user-group.workers.dev",
+    "CITY": "Montreal",
+    "CARD": "cross-system",
+    "ENVIRONMENT": "starter",
+  },
+  "observability": {
+    "logs": { "enabled": true, "head_sampling_rate": 1 },
+    "traces": { "enabled": true, "head_sampling_rate": 1 },
+  },
+}

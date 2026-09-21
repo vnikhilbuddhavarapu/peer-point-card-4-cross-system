@@ -1,0 +1,25 @@
+{
+  "card": "card-4-cross-system",
+  "title": "Cross-System Agent",
+  "intendedEditFiles": ["src/agent/context.ts", "src/agent/evidence.ts"],
+  "sharedServices": [
+    {
+      "id": "mcp-server-portal",
+      "name": "Instructor-operated MCP Server Portal",
+      "purpose": "Provides one Access-authenticated, curated catalog over the four synthetic workshop systems.",
+      "publicConfiguration": ["MCP_PORTAL_URL"],
+      "secretConfiguration": [],
+      "attendeeManaged": false
+    },
+    {
+      "id": "synthetic-mcp-direct",
+      "name": "Instructor-operated direct synthetic MCP servers",
+      "purpose": "Provides the same four Streamable HTTP systems as a rate-limited fallback.",
+      "publicConfiguration": ["MCP_DIRECT_BASE_URL"],
+      "secretConfiguration": [],
+      "attendeeManaged": false,
+      "optional": true
+    }
+  ],
+  "sourceCommit": "development"
+}

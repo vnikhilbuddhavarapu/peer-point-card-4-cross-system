@@ -1,0 +1,471 @@
+.cross-dashboard {
+  display: grid;
+  gap: 0.85rem;
+  min-width: 0;
+}
+
+.cross-panel {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid rgba(218, 218, 218, 0.92);
+  border-radius: 0.9rem;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 7px 24px rgba(28, 22, 18, 0.045);
+}
+
+.cross-panel__header {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 0.85rem 0.65rem;
+  border-bottom: 1px solid #ededed;
+}
+
+.cross-panel__header > div {
+  min-width: 0;
+}
+
+.cross-panel__header p {
+  margin: 0 0 0.15rem;
+  color: #b9470a;
+  font-size: 0.57rem;
+  font-weight: 820;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.cross-panel__header h2 {
+  overflow: hidden;
+  margin: 0;
+  font-size: 0.9rem;
+  letter-spacing: -0.015em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cross-panel__header > span,
+.cross-status {
+  flex: 0 0 auto;
+  padding: 0.18rem 0.45rem;
+  border-radius: 999px;
+  background: #ededed;
+  color: #606060;
+  font-size: 0.54rem;
+  font-weight: 820;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.cross-status--active {
+  background: #fff0d8;
+  color: #904500;
+}
+
+.cross-status--success {
+  background: #dff4e9;
+  color: #116747;
+}
+
+.cross-status--error {
+  background: #ffe2df;
+  color: #981f1a;
+}
+
+.cross-connection__body {
+  padding: 0.78rem 0.85rem 0.85rem;
+}
+
+.cross-mode {
+  display: flex;
+  gap: 0.65rem;
+  align-items: flex-start;
+  padding: 0.65rem;
+  border: 1px solid #d8eadf;
+  border-radius: 0.65rem;
+  background: #f5fbf7;
+}
+
+.cross-mode > span {
+  flex: 0 0 auto;
+  width: 0.55rem;
+  height: 0.55rem;
+  margin-top: 0.13rem;
+  border: 2px solid #fff;
+  border-radius: 999px;
+  background: #2a8b62;
+  box-shadow: 0 0 0 1px #2a8b62;
+}
+
+.cross-mode--direct {
+  border-color: #efcfaa;
+  background: #fff9f1;
+}
+
+.cross-mode--direct > span {
+  background: #d47617;
+  box-shadow: 0 0 0 1px #d47617;
+}
+
+.cross-mode strong {
+  display: block;
+  color: #353535;
+  font-size: 0.67rem;
+}
+
+.cross-mode p {
+  margin: 0.22rem 0 0;
+  color: #6c6c6c;
+  font-size: 0.58rem;
+  line-height: 1.5;
+}
+
+.cross-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  align-items: center;
+  margin-top: 0.68rem;
+}
+
+.cross-actions button,
+.cross-actions a {
+  display: inline-flex;
+  min-height: 1.9rem;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4rem 0.65rem;
+  border: 1px solid #bc4508;
+  border-radius: 0.45rem;
+  background: #c95010;
+  color: #fff;
+  font: inherit;
+  font-size: 0.58rem;
+  font-weight: 780;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.cross-actions button:hover,
+.cross-actions a:hover {
+  background: #ad3d05;
+}
+
+.cross-actions button:focus-visible,
+.cross-actions a:focus-visible {
+  outline: 2px solid #2563a8;
+  outline-offset: 2px;
+}
+
+.cross-actions button:disabled {
+  border-color: #d2d2d2;
+  background: #e6e6e6;
+  color: #787878;
+  cursor: wait;
+}
+
+.cross-actions .cross-button--secondary {
+  border-color: #d5d5d5;
+  background: #fff;
+  color: #555;
+}
+
+.cross-actions .cross-button--secondary:hover {
+  background: #f4f4f4;
+}
+
+.cross-capability-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+}
+
+.cross-capability-grid > div {
+  min-width: 0;
+  border-right: 1px solid #ededed;
+}
+
+.cross-capability-grid > div:last-child {
+  border-right: 0;
+}
+
+.cross-capability-grid h3 {
+  padding: 0.5rem 0.75rem;
+  margin: 0;
+  border-bottom: 1px solid #ededed;
+  color: #777;
+  font-size: 0.52rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.cross-server-list,
+.cross-tool-list,
+.cross-source ul,
+.cross-findings > ol,
+.cross-findings article ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.cross-server-list li,
+.cross-tool-list li {
+  display: flex;
+  gap: 0.45rem;
+  min-width: 0;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.cross-server-list li:last-child,
+.cross-tool-list li:last-child {
+  border-bottom: 0;
+}
+
+.cross-server-list strong,
+.cross-tool-list code {
+  overflow: hidden;
+  min-width: 0;
+  color: #424242;
+  font-size: 0.58rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cross-server-list li > span:last-child,
+.cross-tool-list li > span {
+  flex: 0 0 auto;
+  margin-left: auto;
+  color: #888;
+  font-size: 0.49rem;
+  text-transform: capitalize;
+}
+
+.cross-dot {
+  flex: 0 0 auto;
+  width: 0.38rem;
+  height: 0.38rem;
+  border-radius: 999px;
+  background: #aaa;
+}
+
+.cross-dot--active {
+  background: #d47617;
+}
+
+.cross-dot--success {
+  background: #2a8b62;
+}
+
+.cross-dot--error {
+  background: #c33b34;
+}
+
+.cross-empty {
+  padding: 0.72rem 0.75rem;
+  margin: 0;
+  color: #777;
+  font-size: 0.58rem;
+  line-height: 1.5;
+}
+
+.cross-evidence-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.65rem;
+  padding: 0.75rem;
+  background: #fafafa;
+}
+
+.cross-source {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #e3e3e3;
+  border-radius: 0.65rem;
+  background: #fff;
+}
+
+.cross-source > header {
+  display: flex;
+  gap: 0.42rem;
+  align-items: center;
+  padding: 0.48rem 0.58rem;
+  border-bottom: 1px solid #ededed;
+}
+
+.cross-source > header > span {
+  display: grid;
+  width: 1.1rem;
+  height: 1.1rem;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 0.3rem;
+  background: #e8f0fb;
+  color: #285e9d;
+  font-size: 0.52rem;
+  font-weight: 850;
+}
+
+.cross-source--sap > header > span {
+  background: #e2f4f5;
+  color: #08747b;
+}
+
+.cross-source--jira > header > span {
+  background: #e8ecfd;
+  color: #3154b5;
+}
+
+.cross-source--inventory > header > span {
+  background: #f2e9fb;
+  color: #704299;
+}
+
+.cross-source h3 {
+  overflow: hidden;
+  margin: 0;
+  color: #414141;
+  font-size: 0.62rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cross-source header strong {
+  flex: 0 0 auto;
+  margin-left: auto;
+  color: #888;
+  font-size: 0.52rem;
+}
+
+.cross-source li {
+  padding: 0.55rem 0.62rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.cross-source li:last-child {
+  border-bottom: 0;
+}
+
+.cross-source li strong {
+  display: block;
+  color: #454545;
+  font-size: 0.57rem;
+}
+
+.cross-source li p {
+  margin: 0.2rem 0 0;
+  color: #666;
+  font-size: 0.55rem;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.cross-source__references {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  margin-top: 0.35rem;
+}
+
+.cross-source li code {
+  display: inline-block;
+  max-width: 100%;
+  overflow: hidden;
+  color: #7e4b2e;
+  font-size: 0.49rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cross-findings > ol > li {
+  display: grid;
+  grid-template-columns: 2rem minmax(0, 1fr);
+  gap: 0.62rem;
+  padding: 0.68rem 0.78rem;
+  border-bottom: 1px solid #ededed;
+}
+
+.cross-findings > ol > li:last-child {
+  border-bottom: 0;
+}
+
+.cross-findings > ol > li > span {
+  color: #c95010;
+  font-size: 0.55rem;
+  font-weight: 840;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.06em;
+}
+
+.cross-findings article {
+  min-width: 0;
+}
+
+.cross-findings h3 {
+  margin: 0;
+  color: #363636;
+  font-size: 0.67rem;
+}
+
+.cross-findings article > p {
+  margin: 0.28rem 0 0;
+  color: #5d5d5d;
+  font-size: 0.6rem;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+
+.cross-findings article ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-top: 0.45rem;
+}
+
+.cross-findings article li {
+  padding: 0.13rem 0.34rem;
+  border-radius: 999px;
+  background: #f0f0f0;
+  color: #686868;
+  font-size: 0.48rem;
+  font-weight: 720;
+}
+
+@media (max-width: 720px) {
+  .cross-capability-grid,
+  .cross-evidence-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .cross-capability-grid > div {
+    border-right: 0;
+    border-bottom: 1px solid #ededed;
+  }
+
+  .cross-capability-grid > div:last-child {
+    border-bottom: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .cross-panel__header {
+    align-items: flex-start;
+  }
+
+  .cross-actions {
+    display: grid;
+  }
+
+  .cross-actions button,
+  .cross-actions a {
+    width: 100%;
+  }
+
+  .cross-findings > ol > li {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.25rem;
+  }
+}
