@@ -1,6 +1,6 @@
 # Cross-System Agent
 
-[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)]([CARD_4_DEPLOY_URL])
+[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/vnikhilbuddhavarapu/peer-point-card-4-cross-system)
 
 Build an Agent that answers a question only after joining evidence from CRM, ERP, ticketing, and configuration inventory systems. The systems are exposed through one governed MCP Server Portal, with rate-limited direct MCP servers as the fallback.
 
